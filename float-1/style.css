@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+  max-width: 540px;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  border-bottom: 1px solid #e5eaef;
+}
+
+/* .tab-menu {
+  overflow: hidden;
+} */
+
+/* float로 내용물이 모두 떠버려서 상위요소의 높이가 사라졌을 때! 다음의 가상요소를 만들어준다. */
+.tab-menu::after {
+  content: "";
+  /* 내용 넣어주기 */
+  display: block;
+  clear: left;
+  /* float : left니까 clear도 left */
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab-menu-item a {
+  display: block;
+  /* 기존 inline으로 돼 있어서 padding값이 안먹히기 때문에 */
+  padding: 16px 20px;
+  /* li가 아닌 a에 패딩! 클릭하기 쉽게! */
+}
+
+/* 클래스 같은 건 붙이기 */
+.tab-menu-item.selected a {
+  color: #2860e1;
+  font-weight: 500;
+}
+.tab-menu-item.selected {
+  border-bottom: #2860e1 2px solid;
+}
