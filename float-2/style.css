@@ -6,6 +6,7 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
   letter-spacing: -0.02em;
+  background-color: #1f2d3d;
 }
 
 h1 {
@@ -20,39 +21,38 @@ strong {
   font-weight: 400;
   color: #afb3b9;
   line-height: 1.4285714286;
+  margin-top: 4px;
+  display: block;
 }
 
 p {
   font-size: 16px;
   color: #79818b;
   line-height: 1.5;
-}
-.card {
-  padding: 20px;
-  max-width: 540px;
-  display: flex;
+  margin-top: 12px;
 }
 
-/* .clearfix::after {
+/* 가상요소 새로 만들기 */
+.clearfix::after {
+  clear: left;
   content: "";
   display: block;
-  clear: both;
-} */
-.card-user {
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  /* float: left; */
-  margin-right: 20px;
-}
-.card-content {
-  /* float: left; */
 }
 
-.card-content h1 {
-  margin-bottom: 4px;
+.card-user {
+  width: 44px;
+  height: 44px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
 }
-.card-content strong {
-  margin-bottom: 12px;
-  display: block;
+
+.card {
+  background-color: white;
+  max-width: 541px;
+  padding: 20px;
+}
+
+.card-content {
+  float: left;
 }
