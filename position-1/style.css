@@ -1,0 +1,64 @@
+* {
+  /* 💯 border-box로 해야 css가 편하다! */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #273444;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #273444;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+.user-card {
+  width: 240px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #e5eaef;
+  background-color: white;
+}
+
+.user-card::after {
+  content: "";
+  clear: left;
+  display: block;
+}
+.user-photo {
+  position: relative;
+  /* user-status 위치를 잡게 해주기 위해 */
+  margin-right: 12px;
+  float: left;
+}
+
+.user-photo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* img는 원래 inline이지만 css용이성을 위해 block처리 */
+  display: block;
+}
+
+.user-status {
+  /* border-box므로 두꼐까지 감안해서 12px */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #21d891;
+  border: 2px solid white;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+}
+
+.user-name {
+  margin-top: 8px;
+  float: left;
+}
