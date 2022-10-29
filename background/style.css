@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-.like-button {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-/* ▼ WHERE YOUR CODE BEGINS */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +8,17 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: aquamarine;
+}
+
+/* 💯 스크린 리더 온리 기억하기!! */
+.sr-only {
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  /* 투명도 (0: 완전투명  ~ 1: 완전불투명)*/
 }
 
 .card {
@@ -25,16 +30,39 @@ body {
 }
 
 .card-image {
+  position: relative;
   width: 300px;
   height: 200px;
   background-image: url("./assets/img-house.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  /* center해주지 않으면 사진의 왼쪽부터 나온다 */
+  /* 💯 center해주지 않으면 사진의 왼쪽부터 나온다 */
   background-size: cover;
-  /* background 4형제 기억하기! */
+  /* 💯 background 4형제 기억하기! */
   margin-right: 24px;
   border-radius: 6px;
+}
+
+.like-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-image: url("./assets/icon-favorite.svg");
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center center;
+  background-size: 24px 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* 안 배운 개념 */
+}
+
+.card-content {
+  flex-grow: 1;
 }
 
 .card-header {
@@ -76,6 +104,7 @@ body {
   position: relative;
   top: 2px;
   content: "";
+  /* content는 무조건 들어가야 한다! */
   background-image: url(./assets/icon-star.svg);
   background-size: contain;
   background-position: center center;
@@ -98,4 +127,20 @@ body {
   line-height: 1.6;
   color: #151b26;
   margin-bottom: 16px;
+}
+
+.property-detail {
+  font-size: 14px;
+  line-height: 1.1428571428;
+  color: #7d858f;
+}
+.property-detail dd span::after {
+  content: " ·";
+  margin: 0 4px;
+}
+.property-detail dd span:last-child::after {
+  content: "";
+}
+.property-detail div {
+  margin-bottom: 8px;
 }
