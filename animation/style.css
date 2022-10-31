@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: antiquewhite;
+}
+.loading {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 216px;
+}
+
+.loading-title {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33333333;
+  color: #151b26;
+  text-align: center;
+  animation: loding-title-fadeout 1.6s ease-out alternate infinite;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 12px;
+  position: relative;
+  /* block으로 자동 신분 상승 */
+  margin-top: 20px;
+  border-radius: 100px;
+  background-color: #e5eaef;
+}
+.progress-bar-gauge {
+  width: 0;
+  height: 12px;
+  background-color: #13ce66;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  animation: progress-bar-gauge 1.6s infinite ease-out;
+}
+
+@keyframes loding-title-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes progress-bar-gauge {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
