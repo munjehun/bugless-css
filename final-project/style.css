@@ -5,6 +5,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  color: #2b292d;
 }
 
 /* Reset CSS */
@@ -126,6 +127,7 @@ p {
 
 .service-title {
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.3636363636;
   letter-spacing: -0.04em;
   margin-bottom: 16px;
@@ -136,6 +138,28 @@ p {
   margin-bottom: 40px;
 }
 
+/* Program */
+.section {
+  padding: 80px 0;
+}
+
+.program .section-category {
+  display: block;
+  color: #009b4d;
+  /* strong태그는 margin-bottom이 안먹히므로 */
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 34px;
+  line-height: 1.058823529;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
 /* >= 768px (Desktop) */
 @media screen and (min-width: 768px) {
   /* Reset CSS */
@@ -143,6 +167,27 @@ p {
     font-size: 22px;
     line-height: 1.454545;
     letter-spacing: -0.01em;
+  }
+
+  .fill-button {
+    width: 160px;
+    height: 56px;
+  }
+
+  .section {
+    padding-bottom: 96px;
+  }
+
+  .section-category {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 1.0909090909;
+  }
+
+  .section-title {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 32px;
   }
 
   /* Landing */
@@ -166,10 +211,6 @@ p {
     margin-top: 32px;
   }
 
-  .landing .fill-button {
-    width: 160px;
-    height: 56px;
-  }
   .landing .button-group .fill-button {
     font-size: 18px;
     line-height: 1.55555555555;
@@ -188,6 +229,12 @@ p {
 
   .service .col-12:first-child {
     margin-bottom: 0;
+  }
+
+  /* Program */
+
+  .program {
+    text-align: center;
   }
 }
 
