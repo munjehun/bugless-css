@@ -84,11 +84,11 @@ p {
   justify-content: center;
 }
 
-.landing .button-group .fill-button:first-child {
+.fill-button:first-child {
   margin-right: 8px;
 }
 
-.landing .fill-button {
+.fill-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +148,7 @@ p {
   padding: 80px 0;
 }
 
-.program .section-category {
+.section-category {
   display: block;
   color: #009b4d;
   /* strong태그는 margin-bottom이 안먹히므로 */
@@ -202,6 +202,38 @@ p {
   font-weight: 700;
   line-height: 1.33333333;
   letter-spacing: -0.02em;
+}
+
+/* Curriculum */
+
+.curriculum .section-category {
+  color: #0189d1;
+}
+
+.curriculum .section-desc {
+  margin-bottom: 32px;
+}
+
+.curriculum-image {
+  display: none;
+}
+
+.curriculum .row:first-child {
+  margin-bottom: 48px;
+}
+
+.curriculum-detail {
+  font-size: 15px;
+  line-height: 1.466666666;
+  letter-spacing: -0.01em;
+}
+
+.curriculum-detail:first-child {
+  margin-bottom: 40px;
+}
+
+.curriculum strong {
+  font-weight: 700;
 }
 
 /* >= 768px (Desktop) */
@@ -291,6 +323,41 @@ p {
   .program-title {
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  /* Curriculum */
+
+  .curriculum .section-desc {
+    margin-bottom: 72px;
+  }
+
+  .curriculum .row:first-child {
+    margin-bottom: 36px;
+  }
+
+  .curriculum-detail {
+    font-size: 18px;
+    line-height: 1.444444444;
+    letter-spacing: -0.01em;
+  }
+
+  .curriculum-detail:first-child {
+    margin-bottom: 0;
+  }
+
+  .curriculum strong {
+    font-weight: 700;
+  }
+
+  .curriculum-image {
+    display: block;
+  }
+
+  .curriculum-image img {
+    display: block;
+    width: 100%;
+    max-width: 425;
+    height: auto;
   }
 }
 
