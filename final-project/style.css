@@ -105,7 +105,7 @@ p {
   text-align: center;
   transition: opacity 0.2s;
 }
-.landing .fill-button:hover {
+.fill-button:hover {
   opacity: 0.5;
 }
 
