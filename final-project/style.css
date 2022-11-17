@@ -303,6 +303,25 @@ p {
   text-decoration: underline;
 }
 
+/* Footer */
+
+footer {
+  padding: 24px 0 30px;
+}
+
+footer a {
+  display: block;
+  color: #807f81;
+  font-size: 14px;
+  line-height: 1.7142857142857;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+footer a:last-child {
+  margin-bottom: 0;
+}
+
 /* >= 768px (Desktop) */
 @media screen and (min-width: 768px) {
   /* Reset CSS */
@@ -481,6 +500,17 @@ p {
   .subscription-misc {
     font-size: 14px;
     line-height: 1.71428571428;
+  }
+
+  /* Footer */
+  footer {
+    padding: 16px 0;
+  }
+
+  footer a {
+    color: #807f81;
+    display: inline;
+    margin: 0 16px 0 0;
   }
 }
 
